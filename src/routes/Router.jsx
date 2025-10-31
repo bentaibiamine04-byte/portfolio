@@ -4,6 +4,7 @@ import Loading from "../components/common/loading/Loading";
 
 const Home = lazy(() => import("../pages/Home"));
 const Main = lazy(() => import("../layouts/Main"));
+const ProjectDetail = lazy(() => import("../pages/ProjectDetail"));
 
 export const router = createBrowserRouter([
   {
@@ -16,7 +17,15 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <Home />,
+      },
+      {
+        path: "/project/:id",
+        element: (
+          <Suspense fallback={<Loading />}>
+            <ProjectDetail />
+          </Suspense>
+        ),
       },
     ],
   },
