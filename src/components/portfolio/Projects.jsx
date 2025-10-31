@@ -34,7 +34,7 @@ const Projects = ({ data }) => {
 
         {/* 🎓 Show buttons only for Career Development card */}
         {data?.title === "Career Development" && (
-          <div className="flex gap-3 mt-3">
+          <div className="flex gap-3 mt-3" onClick={(e) => e.stopPropagation()}> {/* Add this */}
             <a
               href="/assets/cv/cv_ang.pdf"
               download

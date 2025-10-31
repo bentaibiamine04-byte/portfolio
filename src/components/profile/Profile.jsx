@@ -1,7 +1,8 @@
 import person from "../../assets/images/person2.png";
 import vd from "../../assets/vds/portfolio.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import SocialMedia from "../common/socialMedia/SocialMedia";
 
 const Profile = () => {
@@ -16,11 +17,23 @@ const Profile = () => {
           <h2 className="text-2xl sm:text-3xl font-semibold mb-3">
             Welcome to My ePortfolio
           </h2>
-          <p className="text-sm sm:text-base leading-relaxed">
+          <p className="text-sm sm:text-base leading-relaxed mb-4">
             This space will grow and evolve over time, just like my experiences.
             I hope it gives a clear and inspiring picture of my path, my values,
             and my ambitions. Thank you for visiting my ePortfolio!
           </p>
+
+          {/* LinkedIn Button */}
+          <a
+              href="https://www.linkedin.com/in/imane-bentaibi-471582373"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+              <span>Connect on LinkedIn</span>
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-xs" />
+            </a>
         </div>
 
         {/* 📱 Video Reel side */}
