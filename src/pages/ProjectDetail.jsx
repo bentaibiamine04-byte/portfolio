@@ -3,6 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import projectData from "../components/portfolio/projectData";
 
+import cvEng from "../../assets/cv/cv_eng.pdf";
+import cvFr from "../../assets/cv/cv_fr.pdf";
+
 // Extended project data with full descriptions
 const projectDetailsData = {
   1: {
@@ -169,16 +172,16 @@ const ProjectDetail = () => {
           <h3 className="text-xl font-semibold text-gray-900 mb-4">Download My Resume</h3>
           <div className="flex gap-4">
             <a
-              href="/assets/cv/cv_eng.pdf"
-              download
+              href={cvEng}
+              download="CV_Imane_Bentaibi_EN.pdf"
               className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition shadow-md"
             >
               <FontAwesomeIcon icon={faDownload} />
               <span>EN Resume</span>
             </a>
             <a
-              href="/assets/cv/cv_fr.pdf"
-              download
+              href={cvFr}
+              download="CV_Imane_Bentaibi_FR.pdf"
               className="flex items-center gap-2 px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition shadow-md"
             >
               <FontAwesomeIcon icon={faDownload} />
